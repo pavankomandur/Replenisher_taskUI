@@ -1,27 +1,18 @@
-# TaskManager
+Replenisher Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Today’s Replenishment manager is required to complete a variety of tasks, working with many people to insure optimal product movement through the supply chain.
+The goal of this challenge to create an application which allows experienced business users to curate a list of recurring tasks for individual contributors to execute. Individuals should also be able to create independent tasks to be added to their personalized task list. Finally, specialized tasks may also be created by external processes via service calls.
 
-## Development server
+Installing
+1. Download either zip folder or through Github Cloning Process
+2. Open project in any IDE such as Eclipse, IntelliJ etc.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Application Features
+1.	User can be able to create tasks
+2.	Business user can create tasks and assign to him or assign to his reporters using Task Template
+3.	Option to create a tasks on a basis of frequency/schedule : Recurring Tasks
+4.	Display of pending tasks and also based on Rank and priority
+5.	Tracking Time for each status : Coding is done, but display on UI is still in progress.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Softwares :
+Angular 6.
