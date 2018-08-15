@@ -1,0 +1,29 @@
+<div class="wrapper">
+	<div class="container">
+		<h1>Welcome</h1>
+	
+		<div class="form">
+				<br>
+		<p-dropdown [options]="roles" [(ngModel)]="role"></p-dropdown> 
+		<br>
+		<br>
+            <input id="input" type="text" size="30" pInputText [(ngModel)]="username"> 
+			<input id="input" type="password" size="30" pInputText [(ngModel)]="password">
+
+			<button type="submit" id="login-button" (click)="login()">Login</button>
+        </div>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>

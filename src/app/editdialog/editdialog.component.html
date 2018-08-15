@@ -1,0 +1,46 @@
+<p-dialog *ngIf="task" header="Edit Task" [(visible)]="display" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200" [minY]="70"
+[maximizable]="true">
+<div class="ui-g">
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Name</label>
+    <input type="text" pInputText [(ngModel)]="task.name"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Description</label>
+    <input type="text" pInputText [(ngModel)]="task.description"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Status</label>
+    <input type="text" pInputText [(ngModel)]="task.taskStatus"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Priority</label>
+    <input type="text" pInputText [(ngModel)]="task.taskPriority"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Note</label>
+    <input type="text" pInputText [(ngModel)]="task.note"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Feedback</label>
+    <input type="text" pInputText [(ngModel)]="task.feedback"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Estimated Time</label>
+    <input type="text" pInputText [(ngModel)]="task.estimatedTimeOfFinish"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Created By</label>
+    <input type="text" pInputText [(ngModel)]="task.reportedUserId"/>
+  </div>
+  <div class="ui-g ui-fluid spacing">
+    <label class="label">Assigned To</label>
+    <input type="text" pInputText [(ngModel)]="task.assignedUser"/>
+  </div>
+  </div>
+  <p-footer>
+      <button type="button" pButton icon="pi pi-check" (click)="closeTask()" label="Close"></button>
+    <button type="button" pButton icon="pi pi-check" (click)="editTask()" label="Edit"></button>
+
+</p-footer>
+</p-dialog>

@@ -1,0 +1,14 @@
+<p-dialog *ngIf="task" header="Edit Task" [(visible)]="display" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200" [minY]="70" 
+[maximizable]="true">
+<div class="ui-g">
+  <div class="ui-g ui-fluid spacing">
+   Are you sure you want to delete task?
+  </div>
+  
+  </div>
+  <p-footer>
+      <button type="button" pButton icon="pi pi-check" (click)="closeTask()" label="Close"></button>
+    <button type="button" pButton icon="pi pi-check" (click)="deleteTask()" label="Delete"></button>
+    
+</p-footer>
+</p-dialog>

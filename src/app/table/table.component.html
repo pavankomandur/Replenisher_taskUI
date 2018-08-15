@@ -1,0 +1,39 @@
+<p-table [columns]="cols" [value]="tasks" selectionMode="single" [(selection)]="selectedTask" (onRowSelect)="onRowSelect(selectedTask)" dataKey="name">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th style="width: 3em"></th>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>
+                <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+            </td>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+  <ng-template pTemplate="summary">
+          <div style="text-align: left">
+              Selected Task: {{selectedTask?.name}}
+          </div>
+      </ng-template>
+</p-table>
+
+<br><br>
+<button pButton type="button" (click)="handleCreate($event)" label="Create" ></button>
+<button pButton type="button" [disabled] = "!(username === selectedTask?.reportedUserId)" (click)="handleEdit($event)" label="Edit" ></button>
+<button pButton type="button" [disabled] = "!(username === selectedTask?.reportedUserId)" (click)="handleDelete($event)" label="Delete" ></button>
+<button pButton type="button" [disabled] = "!(role === 'BUSINESS')" (click)="handleRecurringTask($event)" label="Recurring Task" ></button>
+
+
+
+<app-dialog [display]="showDialogCreate"></app-dialog>
+<app-editdialog [display]="showDialogEdit" [task]="selectedTask"></app-editdialog>
+
+<app-task-delete [display]="showDialogDelete" [task]="selectedTask"></app-task-delete>
+<app-recurring [display]="showDialogRecurring" [username]="username"></app-recurring>
